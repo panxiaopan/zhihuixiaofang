@@ -1,0 +1,37 @@
+
+.hj-trouble__select{
+  &__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 0px;
+  }
+
+&__val{
+  font-family: PingFang-SC-Bold;;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 32px;
+  color: rgba(255, 255, 255, 1);
+  /* color: rgba(103,119,233,1); */
+  flex-grow: 1;
+  text-align: center;
+}
+
+&__options__container{
+  width: 100%;
+  text-indent: 10px;
+  position: relative;
+  background: rgba(255, 255, 255, 1);
+  border-top: 1px solid #ccc;
+  z-index: 0;
+  height: 0px;
+  visibility: hidden; 
+  transition: height 1s, visibility 2s,;
+  }
+  &__options{
+  width: 100%;
+  transition: height 1s, visibility 1s;
+  }
+}
+

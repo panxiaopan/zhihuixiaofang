@@ -1,0 +1,35 @@
+{
+  "pages":[],
+  "subPackages": [{
+    "root": "pages/trouble-package",
+    "pages": [
+      "trouble-detail/main",
+      "trouble-dispatch-list/main",
+      "trouble-dispose-comments/main",
+      "trouble-new-maintenance/main"
+    ]
+  },
+  {
+    "root": "pages/assignment-package",
+    "pages": [
+      "assignment-detail/main",
+      "assignment-new-maintenance/main",
+      "assignment-new-order/main",
+      "assignment-new-comment/main",
+      "assignment-finished/main"
+    ]
+  },
+  {
+    "root": "pages/social-unit-package",
+    "pages": ["home/main", "info/main"]
+  },
+  {
+    "root": "pages/device-package",
+    "pages": ["home/main"]
+  },
+  {
+    "root": "pages/user-mng-package",
+    "pages": ["user-mng/main", "edit-user/main", "new-user/main"]
+  }
+  ]
+}

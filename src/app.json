@@ -1,0 +1,127 @@
+{
+  "pages": [
+    "pages/index/main",
+    "pages/user-info/main",
+    "pages/trouble/main",
+    "pages/assignment/main",
+    "pages/monitor/main",
+    "pages/me/main",
+    "pages/forget-password/main",
+    "pages/login/main",
+    "pages/login-with-count/main",
+    "pages/search/main",
+    "pages/display-video/main"
+  ],
+  "subPackages": [{
+      "root": "pages/trouble-package",
+      "pages": [
+        "trouble-detail/main",
+        "trouble-dispatch-list/main",
+        "trouble-dispose-comments/main",
+        "trouble-new-maintenance/main"
+      ]
+    },
+    {
+      "root": "pages/assignment-package",
+      "pages": [
+        "assignment-detail/main",
+        "assignment-new-maintenance/main",
+        "assignment-new-order/main",
+        "assignment-new-comment/main",
+        "assignment-finished/main"
+      ]
+    },
+    {
+      "root": "pages/social-unit-package",
+      "pages": [
+        "home/main",
+        "info/main"
+      ]
+    },
+    {
+      "root": "pages/device-package",
+      "pages": ["home/main"]
+    },
+    {
+      "root": "pages/me-package",
+      "pages": [
+        "modify-password/main",
+        "me-setting/main",
+        "feedback/main",
+        "new-trouble/main",
+        "social-unit-mng/main",
+        "new-social-unit-device/main",
+        "new-social-unit/main",
+        "new-finish/main",
+        "edit-social-unit/main",
+        "social-unit-search/main",
+        "edit-social-unit-device/main",
+        "new-social-unit-device-step/main",
+        "social-unit-device-search/main",
+        "user-search/main",
+        "device-fire-params-setting/main",
+        "device-single-params-setting/main",
+        "worker-order-mng/main",
+        "complete-info/main",
+        "common-problem/main"
+      ]
+    }, {
+      "root": "pages/user-mng-package",
+      "pages": ["user-mng/main", "edit-user/main", "new-user/main"]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#6678E9",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "white"
+  },
+  "debug": true,
+  "tabBar": {
+    "color": "#8D8D8D",
+    "selectedColor": "#6678E9",
+    "backgroundColor": "#F5F5F5",
+    "list": [{
+        "pagePath": "pages/index/main",
+        "text": "首页",
+        "iconPath": "./static/images/common/home@2x.png",
+        "selectedIconPath": "./static/images/common/home_active@2x.png"
+      }, {
+        "pagePath": "pages/trouble/main",
+        "text": "隐患",
+        "iconPath": "./static/images/common/trouble@2x.png",
+        "selectedIconPath": "./static/images/common/trouble_active@2x.png"
+      }, {
+        "pagePath": "pages/assignment/main",
+        "text": "任务",
+        "iconPath": "./static/images/common/assignment@2x.png",
+        "selectedIconPath": "./static/images/common/assignment_active@2x.png"
+      }, {
+        "pagePath": "pages/monitor/main",
+        "text": "监控",
+        "iconPath": "./static/images/common/monitor@2x.png",
+        "selectedIconPath": "./static/images/common/monitor_active@2x.png"
+      },
+      {
+        "pagePath": "pages/me/main",
+        "text": "我",
+        "iconPath": "./static/images/common/me@2x.png",
+        "selectedIconPath": "./static/images/common/me_active@2x.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于定位您周边的设备信息"
+    }
+  },
+  "plugins": {
+    "tencentvideo": {
+      "version": "1.3.0",
+      "provider": "wxa75efa648b60994b"
+    }
+  }
+
+
+
+}

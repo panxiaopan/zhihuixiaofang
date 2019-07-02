@@ -1,0 +1,16 @@
+{
+  "navigationBarTitleText": "监控",
+  "usingComponents":{
+    "ec-canvas": "ec-canvas",
+    "wux-col":"wux-weapp/col/index",
+    "wux-row":"wux-weapp/row/index",
+    "wux-icon": "wux-weapp//icon/index",
+    "wux-white-space": "wux-weapp/white-space/index",
+    "wux-wing-blank": "wux-weapp/wing-blank/index",
+    "wux-search-bar": "wux-weapp/search-bar/index",
+    "wux-filterbar": "wux-weapp/filterbar/index",
+    "wux-backdrop": "wux-weapp/backdrop/index",
+    "wux-refresher": "wux-weapp/refresher/index",
+    "wux-toptips": "wux-weapp/toptips/index"
+  }
+}

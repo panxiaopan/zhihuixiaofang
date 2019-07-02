@@ -1,0 +1,96 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"uglifyFileName": false
+	},
+	"miniprogramRoot": "dist/",
+	"compileType": "miniprogram",
+	"appid": "wx86c6e33d96d44733",
+	"projectname": "safe-energy-cloud",
+	"libVersion": "2.6.2",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 6,
+			"list": [
+				{
+					"id": -1,
+					"name": "2323",
+					"pathName": "pages/assignment-detail/main",
+					"query": "workOrderId=72",
+					"scene": "1035",
+					"referrerInfo": {
+						"appId": "132133"
+					}
+				},
+				{
+					"id": 1,
+					"name": "设备详情",
+					"pathName": "pages/device-package/home/main",
+					"query": "name=1#SE3311&id=9&deviceId=9&currentTab=trouble"
+				},
+				{
+					"id": 2,
+					"name": "默认首页跳转隐患详情",
+					"pathName": "pages/index/main",
+					"query": "from=officialAccount&redirect=trouble-detail&id=1951&eventTime=2018-12-13 08:26:03&attachedWorkOrderId=224",
+					"scene": "1043",
+					"referrerInfo": {
+						"appId": "wx24756f91a6d56ced"
+					}
+				},
+				{
+					"id": -1,
+					"name": "默认主页home",
+					"pathName": "pages/home/main",
+					"query": "from=officialAccount",
+					"scene": "1001"
+				},
+				{
+					"id": -1,
+					"name": "社会单位管理",
+					"pathName": "pages/social-unit-mng/main",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "烟感",
+					"pathName": "pages/device-package/home/main",
+					"query": "deviceType=SMOKE_DETECTOR&deviceId=7&name=真实烟感&currentTab=summary&id=1&socialUnitName=华杰电气技术有限公司",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "华杰电气技术有限公司",
+					"pathName": "pages/social-unit-package/home/main",
+					"query": "id=1&name=华杰电气技术有限公司&currentTab=device",
+					"scene": null
+				}
+			]
+		}
+	}
+}

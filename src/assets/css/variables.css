@@ -1,0 +1,6 @@
+.hj-map__test{
+  color: red;
+}
+.hj-map{
+  --primary-color: red;
+}

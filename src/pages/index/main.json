@@ -1,0 +1,14 @@
+{
+
+  "navigationBarTitleText": "首页",
+  "usingComponents":{
+    "ec-canvas": "ec-canvas",
+    "wux-col":"wux-weapp/col/index",
+    "wux-row":"wux-weapp/row/index",
+    "wux-icon": "wux-weapp//icon/index",
+    "wux-calendar": "wux-weapp/calendar/index",
+    "wux-cell-group": "wux-weapp/cell-group/index",
+    "wux-cell": "wux-weapp/cell/index",
+    "wux-toptips": "wux-weapp/toptips/index"
+  }
+}

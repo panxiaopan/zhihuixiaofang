@@ -1,0 +1,27 @@
+{
+  "navigationBarTitleText": "社会单位搜索",
+  "usingComponents": {
+    "wux-col": "wux-weapp/col/index",
+    "wux-row": "wux-weapp/row/index",
+    "wux-icon": "wux-weapp//icon/index",
+    "wux-calendar": "wux-weapp/calendar/index",
+    "wux-cell-group": "wux-weapp/cell-group/index",
+    "wux-cell": "wux-weapp/cell/index",
+    "wux-card": "wux-weapp/card/index",
+    "ec-canvas": "ec-canvas",
+    "wux-segmented-control": "wux-weapp/segmented-control/index",
+    "wux-white-space": "wux-weapp/white-space/index",
+    "wux-wing-blank": "wux-weapp/wing-blank/index",
+    "wux-divider": "wux-weapp/divider/index",
+    "wux-grids": "wux-weapp/grids/index",
+    "wux-grid": "wux-weapp/grid/index",
+    "wux-steps": "wux-weapp/steps/index",
+    "wux-step": "wux-weapp/step/index",
+    "wux-upload": "wux-weapp/upload/index",
+    "wux-select": "wux-weapp/select/index",
+    "wux-toptips": "wux-weapp/toptips/index",
+    "wux-search-bar": "wux-weapp/search-bar/index",
+    "wux-tag": "wux-weapp/tag/index",
+    "i-load-more": "iview-weapp/load-more/index"
+  }
+}

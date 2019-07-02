@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "获取用户信息",
+  "usingComponents":{
+    "wux-icon": "wux-weapp/icon/index",
+    "wux-grids": "wux-weapp/grids/index",
+    "wux-grid": "wux-weapp/grid/index",
+    "wux-wing-blank": "wux-weapp/wing-blank/index",
+    "wux-white-space": "wux-weapp/white-space/index",
+    "wux-col":"wux-weapp/col/index",
+    "wux-row":"wux-weapp/row/index",
+    "wux-divider": "wux-weapp/divider/index"
+  }
+}

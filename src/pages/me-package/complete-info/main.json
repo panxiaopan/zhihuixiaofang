@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "完善资料",
+  "usingComponents":{
+    "wux-col": "wux-weapp/col/index",
+    "wux-row": "wux-weapp/row/index",
+    "wux-icon": "wux-weapp//icon/index",
+    "wux-white-space": "wux-weapp/white-space/index",
+    "wux-wing-blank": "wux-weapp/wing-blank/index",
+    "wux-avatar": "wux-weapp/avatar/index",
+    "wux-cell-group": "wux-weapp/cell-group/index",
+    "wux-cell": "wux-weapp/cell/index",
+    "wux-toptips": "wux-weapp/toptips/index",
+    "wux-vcode": "wux-weapp/vcode/index"
+  }
+}

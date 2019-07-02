@@ -1,0 +1,408 @@
+ ├─ common
+ | ├─  vendor.wxss
+ | ├─  vendor.js
+ | └─  manifest.js
+ ├─ components
+ | ├─ common
+ | | ├─  hj-simple-date-picker.vue.wxml
+ | | ├─  hj-search.vue.wxml
+ | | ├─  hj-form.vue.wxml
+ | | └─  hj-flow-state.vue.wxml
+ | ├─ hj-assignment
+ | | └─  hj-assignment-panel.vue.wxml
+ | ├─ hj-monitor
+ | | └─  hj-monitor-social-unit-panel.vue.wxml
+ | ├─ hj-trouble
+ | | ├─  hj-trouble-panel.vue.wxml
+ | | └─  hj-filter.vue.wxml
+ | ├─ home
+ | | └─  hjPanelTroubleStasticSlot.vue.wxml
+ | ├─ login
+ | | ├─  login-with-count-input.vue.wxml
+ | | └─  bg-box.vue.wxml
+ | ├─ map
+ | | ├─  hj-search-map-panel.vue.wxml
+ | | └─  hj-map-panel.vue.wxml
+ | ├─ search-com
+ | | ├─  search-list-frame.vue.wxml
+ | | └─  index.vue.wxml
+ | ├─ search-display-panel
+ | | └─  map-social-unit-panel.vue.wxml
+ | ├─ send-code-item
+ | | └─  index.vue.wxml
+ | ├─ user-search
+ | | ├─  index.vue.wxml
+ | | └─  hj-tags.vue.wxml
+ | ├─  slots.wxml
+ | ├─  hj-panel.vue.wxml
+ | ├─  hj-date-picker.vue.wxml
+ | └─  card.vue.wxml
+ ├─ miniprogram_npm
+ ├─ node_modules
+ ├─ pages
+ | ├─ assignment
+ | | ├─  main.wxss
+ | | ├─  main.wxml
+ | | ├─  main.json
+ | | ├─  main.js
+ | | ├─  main - 副本.json
+ | | └─  index.vue.wxml
+ | ├─ assignment-package
+ | | ├─ assignment-detail
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ assignment-finished
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ assignment-new-comment
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ assignment-new-maintenance
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ assignment-new-order
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | ├─ device-package
+ | | ├─ device-assignment
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ device-pkg
+ | | | ├─  hj-device-trouble.vue.wxml
+ | | | ├─  hj-device-trouble-panel.vue.wxml
+ | | | ├─  hj-device-summary.vue.wxml
+ | | | ├─  hj-device-summary-measure-item-panel.vue.wxml
+ | | | ├─  hj-device-remote-control.vue.wxml
+ | | | ├─  hj-device-assignment.vue.wxml
+ | | | └─  hj-device-assignment-panel.vue.wxml
+ | | ├─ device-remote-control
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ device-summary
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ device-trouble
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ home
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | ├─ forget-password
+ | | ├─  main.wxss
+ | | ├─  main.wxml
+ | | ├─  main.json
+ | | ├─  main.js
+ | | └─  index.vue.wxml
+ | ├─ index
+ | | ├─  main.wxss
+ | | ├─  main.wxml
+ | | ├─  main.json
+ | | ├─  main.js
+ | | └─  index.vue.wxml
+ | ├─ login
+ | | ├─  main.wxss
+ | | ├─  main.wxml
+ | | ├─  main.json
+ | | ├─  main.js
+ | | └─  index.vue.wxml
+ | ├─ login-with-count
+ | | ├─  main.wxss
+ | | ├─  main.wxml
+ | | ├─  main.json
+ | | ├─  main.js
+ | | └─  index.vue.wxml
+ | ├─ me
+ | | ├─  main.wxss
+ | | ├─  main.wxml
+ | | ├─  main.json
+ | | ├─  main.js
+ | | └─  index.vue.wxml
+ | ├─ me-package
+ | | ├─ common-problem
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ complete-info
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | ├─  main-index.vue.wxml
+ | | | └─  index.vue.wxml
+ | | ├─ components
+ | | | ├─  upload-image-form-item.vue.wxml
+ | | | ├─  social-unit-relative-form.vue.wxml
+ | | | ├─  social-unit-panel.vue.wxml
+ | | | ├─  social-unit-panel-without-swipeout.vue.wxml
+ | | | ├─  social-unit-form.vue.wxml
+ | | | ├─  social-unit-fire-control-form.vue.wxml
+ | | | ├─  social-unit-device-panel-without-swipeout.vue.wxml
+ | | | ├─  social-unit-device-panel-with-swipeout.vue.wxml
+ | | | ├─  social-unit-device-mng.vue.wxml
+ | | | ├─  social-unit-device-form.vue.wxml
+ | | | ├─  search-panel.vue.wxml
+ | | | ├─  form-item.vue.wxml
+ | | | ├─  fire-params-form.vue.wxml
+ | | | ├─  edit-social-unit-form.vue.wxml
+ | | | └─  device-params-setting.vue.wxml
+ | | ├─ device-fire-params-setting
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ device-single-params-setting
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ edit-social-unit
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ edit-social-unit-device
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ feedback
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ me-setting
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ modify-password
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ new-finish
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ new-social-unit
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ new-social-unit-device
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ new-social-unit-device-step
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ new-trouble
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ social-unit-device-search
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ social-unit-mng
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ social-unit-search
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ user-search
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ worker-order-mng
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | ├─  main - 副本.json
+ | | | └─  index.vue.wxml
+ | ├─ monitor
+ | | ├─  main.wxss
+ | | ├─  main.wxml
+ | | ├─  main.json
+ | | ├─  main.js
+ | | └─  index.vue.wxml
+ | ├─ search
+ | | ├─  main.wxss
+ | | ├─  main.wxml
+ | | ├─  main.json
+ | | ├─  main.js
+ | | └─  index.vue.wxml
+ | ├─ social-unit-package
+ | | ├─ home
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ info
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ social-unit-assignment
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ social-unit-device
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ social-unit-map
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ social-unit-pkg
+ | | | ├─  hj-social-unit-trouble.vue.wxml
+ | | | ├─  hj-social-unit-trouble-panel.vue.wxml
+ | | | ├─  hj-social-unit-summary.vue.wxml
+ | | | ├─  hj-social-unit-device.vue.wxml
+ | | | └─  hj-social-unit-assignment.vue.wxml
+ | | ├─ social-unit-summary
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ social-unit-trouble
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | ├─ trouble
+ | | ├─  main.wxss
+ | | ├─  main.wxml
+ | | ├─  main.json
+ | | ├─  main.js
+ | | ├─  main - 副本.json
+ | | └─  index.vue.wxml
+ | ├─ trouble-package
+ | | ├─ trouble-detail
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ trouble-dispatch-list
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ trouble-dispose-comments
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ trouble-new-maintenance
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | ├─ user-info
+ | | ├─  main.wxss
+ | | ├─  main.wxml
+ | | ├─  main.json
+ | | ├─  main.js
+ | | └─  index.vue.wxml
+ | ├─ user-mng-package
+ | | ├─ components
+ | | | ├─  user-form.vue.wxml
+ | | | ├─  form-item.vue.wxml
+ | | | └─  edit-user-form.vue.wxml
+ | | ├─ edit-user
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ new-user
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ | | ├─ user-mng
+ | | | ├─  main.wxss
+ | | | ├─  main.wxml
+ | | | ├─  main.json
+ | | | ├─  main.js
+ | | | └─  index.vue.wxml
+ ├─ static
+ ├─  package.json
+ ├─  app.wxss
+ ├─  app.json
+ └─  app.js

@@ -1,0 +1,753 @@
+{
+  "main": {
+    "devManufact": {
+      "en": "Huajie",
+      "zh": "电表厂商-华杰电气"
+    },
+    "devTypeName": "SE3311",
+    "deviceTypeId": 49001
+  },
+  "controlAndSettings": {
+    "controls": [{
+      "name": "分闸",
+      "ident": "brakeopening"
+    }, {
+      "name": "合闸",
+      "ident": "brakeoclosing"
+    }, {
+      "name": "消音",
+      "ident": "erasure"
+    }],
+    "settings": {
+      "commSetting": [{
+        "name": "服务器地址",
+        "type": "text",
+        "ident": "serveraddr"
+      }, {
+        "name": "服务器端口",
+        "type": "int",
+        "ident": "serverport",
+        "value": {
+          "max": 65535,
+          "min": 1,
+          "type": "int"
+        }
+      }],
+      "fireSetting": [{
+        "name": "IR1剩余电流",
+        "ident": "IR1",
+        "warning": {
+          "delay": {
+            "max": "60",
+            "min": "0",
+            "type": "int",
+            "unit": "s"
+          },
+          "value": {
+            "max": 2000,
+            "min": 20,
+            "type": "int",
+            "unit": "mA"
+          },
+          "toutui": {
+            "type": "enum",
+            "values": [{
+              "desc": {
+                "en": "",
+                "zh": "不报警"
+              },
+              "value": 1
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "报警"
+              },
+              "value": 2
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "报警出口DO1"
+              },
+              "value": 3
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "报警出口DO2"
+              },
+              "value": 4
+            }]
+          }
+        },
+        "prewarning": {
+          "delay": {
+            "max": "60",
+            "min": "0",
+            "type": "int",
+            "unit": "s"
+          },
+          "value": {
+            "max": 0.8,
+            "min": 0.1,
+            "type": "float"
+          },
+          "toutui": {
+            "type": "enum",
+            "values": [{
+              "desc": {
+                "en": "",
+                "zh": "不预警"
+              },
+              "value": 1
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "预警"
+              },
+              "value": 2
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "预警出口DO1"
+              },
+              "value": 3
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "预警出口DO2"
+              },
+              "value": 4
+            }]
+          }
+        }
+      }, {
+        "name": "温度1",
+        "ident": "temperature1",
+        "warning": {
+          "delay": {
+            "max": "60",
+            "min": "0",
+            "type": "int",
+            "unit": "s"
+          },
+          "value": {
+            "max": 140,
+            "min": 45,
+            "type": "int",
+            "unit": "℃"
+          },
+          "toutui": {
+            "type": "enum",
+            "values": [{
+              "desc": {
+                "en": "",
+                "zh": "不报警"
+              },
+              "value": 1
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "报警"
+              },
+              "value": 2
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "报警出口DO1"
+              },
+              "value": 3
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "报警出口DO2"
+              },
+              "value": 4
+            }]
+          }
+        },
+        "prewarning": {
+          "delay": {
+            "max": "60",
+            "min": "0",
+            "type": "int",
+            "unit": "s"
+          },
+          "value": {
+            "max": 0.8,
+            "min": 0.1,
+            "type": "float"
+          },
+          "toutui": {
+            "type": "enum",
+            "values": [{
+              "desc": {
+                "en": "",
+                "zh": "不预警"
+              },
+              "value": 1
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "预警"
+              },
+              "value": 2
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "预警出口DO1"
+              },
+              "value": 3
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "预警出口DO2"
+              },
+              "value": 4
+            }]
+          }
+        }
+      }, {
+        "name": "温度2",
+        "ident": "temperature2",
+        "warning": {
+          "delay": {
+            "max": "60",
+            "min": "0",
+            "type": "int",
+            "unit": "s"
+          },
+          "value": {
+            "max": 140,
+            "min": 45,
+            "type": "int",
+            "unit": "℃"
+          },
+          "toutui": {
+            "type": "enum",
+            "values": [{
+              "desc": {
+                "en": "",
+                "zh": "不报警"
+              },
+              "value": 1
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "报警"
+              },
+              "value": 2
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "报警出口DO1"
+              },
+              "value": 3
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "报警出口DO2"
+              },
+              "value": 4
+            }]
+          }
+        },
+        "prewarning": {
+          "delay": {
+            "max": "60",
+            "min": "0",
+            "type": "int",
+            "unit": "s"
+          },
+          "value": {
+            "max": 0.8,
+            "min": 0.1,
+            "type": "float"
+          },
+          "toutui": {
+            "type": "enum",
+            "values": [{
+              "desc": {
+                "en": "",
+                "zh": "不预警"
+              },
+              "value": 1
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "预警"
+              },
+              "value": 2
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "预警出口DO1"
+              },
+              "value": 3
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "预警出口DO2"
+              },
+              "value": 4
+            }]
+          }
+        }
+      }, {
+        "name": "温度3",
+        "ident": "temperature3",
+        "warning": {
+          "delay": {
+            "max": "60",
+            "min": "0",
+            "type": "int",
+            "unit": "s"
+          },
+          "value": {
+            "max": 140,
+            "min": 45,
+            "type": "int",
+            "unit": "℃"
+          },
+          "toutui": {
+            "type": "enum",
+            "values": [{
+              "desc": {
+                "en": "",
+                "zh": "不报警"
+              },
+              "value": 1
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "报警"
+              },
+              "value": 2
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "报警出口DO1"
+              },
+              "value": 3
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "报警出口DO2"
+              },
+              "value": 4
+            }]
+          }
+        },
+        "prewarning": {
+          "delay": {
+            "max": "60",
+            "min": "0",
+            "type": "int",
+            "unit": "s"
+          },
+          "value": {
+            "max": 0.8,
+            "min": 0.1,
+            "type": "float"
+          },
+          "toutui": {
+            "type": "enum",
+            "values": [{
+              "desc": {
+                "en": "",
+                "zh": "不预警"
+              },
+              "value": 1
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "预警"
+              },
+              "value": 2
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "预警出口DO1"
+              },
+              "value": 3
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "预警出口DO2"
+              },
+              "value": 4
+            }]
+          }
+        }
+      }, {
+        "name": "温度4",
+        "ident": "temperature4",
+        "warning": {
+          "delay": {
+            "max": "60",
+            "min": "0",
+            "type": "int",
+            "unit": "s"
+          },
+          "value": {
+            "max": 140,
+            "min": 45,
+            "type": "int",
+            "unit": "℃"
+          },
+          "toutui": {
+            "type": "enum",
+            "values": [{
+              "desc": {
+                "en": "",
+                "zh": "不报警"
+              },
+              "value": 1
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "报警"
+              },
+              "value": 2
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "报警出口DO1"
+              },
+              "value": 3
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "报警出口DO2"
+              },
+              "value": 4
+            }]
+          }
+        },
+        "prewarning": {
+          "delay": {
+            "max": "60",
+            "min": "0",
+            "type": "int",
+            "unit": "s"
+          },
+          "value": {
+            "max": 0.8,
+            "min": 0.1,
+            "type": "float"
+          },
+          "toutui": {
+            "type": "enum",
+            "values": [{
+              "desc": {
+                "en": "",
+                "zh": "不预警"
+              },
+              "value": 1
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "预警"
+              },
+              "value": 2
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "预警出口DO1"
+              },
+              "value": 3
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "预警出口DO2"
+              },
+              "value": 4
+            }]
+          }
+        }
+      }, {
+        "name": "电流",
+        "ident": "current",
+        "warning": {
+          "delay": {
+            "max": "60",
+            "min": "0",
+            "type": "int",
+            "unit": "s"
+          },
+          "value": {
+            "max": 800,
+            "min": 1,
+            "type": "int",
+            "unit": "A"
+          },
+          "toutui": {
+            "type": "enum",
+            "values": [{
+              "desc": {
+                "en": "",
+                "zh": "不报警"
+              },
+              "value": 1
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "报警"
+              },
+              "value": 2
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "报警出口DO1"
+              },
+              "value": 3
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "报警出口DO2"
+              },
+              "value": 4
+            }]
+          }
+        },
+        "prewarning": {
+          "delay": {
+            "max": "60",
+            "min": "0",
+            "type": "int",
+            "unit": "s"
+          },
+          "value": {
+            "max": 0.8,
+            "min": 0.1,
+            "type": "float"
+          },
+          "toutui": {
+            "type": "enum",
+            "values": [{
+              "desc": {
+                "en": "",
+                "zh": "不预警"
+              },
+              "value": 1
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "预警"
+              },
+              "value": 2
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "预警出口DO1"
+              },
+              "value": 3
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "预警出口DO2"
+              },
+              "value": 4
+            }]
+          }
+        }
+      }, {
+        "name": "过压保护",
+        "ident": "overvoltageprotect",
+        "warning": {
+          "delay": {
+            "max": "99",
+            "min": "1",
+            "type": "int",
+            "unit": "s"
+          },
+          "value": {
+            "max": 1.5,
+            "min": 1.0,
+            "type": "float"
+          },
+          "toutui": {
+            "type": "enum",
+            "values": [{
+              "desc": {
+                "en": "",
+                "zh": "不报警"
+              },
+              "value": 1
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "报警"
+              },
+              "value": 2
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "报警出口DO1"
+              },
+              "value": 3
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "报警出口DO2"
+              },
+              "value": 4
+            }]
+          }
+        }
+      }, {
+        "name": "欠压保护",
+        "ident": "undervoltageprotect",
+        "warning": {
+          "delay": {
+            "max": "99",
+            "min": "1",
+            "type": "int",
+            "unit": "s"
+          },
+          "value": {
+            "max": 0.95,
+            "min": 0.3,
+            "type": "float"
+          },
+          "toutui": {
+            "type": "enum",
+            "values": [{
+              "desc": {
+                "en": "",
+                "zh": "不报警"
+              },
+              "value": 1
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "报警"
+              },
+              "value": 2
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "报警出口DO1"
+              },
+              "value": 3
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "报警出口DO2"
+              },
+              "value": 4
+            }]
+          }
+        }
+      }, {
+        "name": "不平衡保护",
+        "ident": "unbalanceprotect",
+        "warning": {
+          "delay": {
+            "max": "99",
+            "min": "1",
+            "type": "int",
+            "unit": "s"
+          },
+          "value": {
+            "max": 1.0,
+            "min": 0.1,
+            "type": "float"
+          },
+          "toutui": {
+            "type": "enum",
+            "values": [{
+              "desc": {
+                "en": "",
+                "zh": "不报警"
+              },
+              "value": 1
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "报警"
+              },
+              "value": 2
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "报警出口DO1"
+              },
+              "value": 3
+            }, {
+              "desc": {
+                "en": "",
+                "zh": "报警出口DO2"
+              },
+              "value": 4
+            }]
+          }
+        }
+      }],
+      "basicSetting": [{
+        "name": "电压额定值",
+        "type": "enum",
+        "unit": "V",
+        "ident": "ratedvol",
+        "values": [{
+          "desc": {
+            "en": "",
+            "zh": "220"
+          },
+          "value": 220
+        }, {
+          "desc": {
+            "en": "",
+            "zh": "380"
+          },
+          "value": 380
+        }]
+      }, {
+        "name": "电流互感器规格",
+        "type": "enum",
+        "unit": "A",
+        "ident": "currentmodel",
+        "values": [{
+          "desc": {
+            "en": "",
+            "zh": "100"
+          },
+          "value": 100
+        }, {
+          "desc": {
+            "en": "",
+            "zh": "200"
+          },
+          "value": 200
+        }, {
+          "desc": {
+            "en": "",
+            "zh": "400"
+          },
+          "value": 400
+        }, {
+          "desc": {
+            "en": "",
+            "zh": "800"
+          },
+          "value": 800
+        }]
+      }, {
+        "name": "接线方式",
+        "type": "enum",
+        "ident": "wiringtype",
+        "values": [{
+          "desc": {
+            "en": "",
+            "zh": "1P2W"
+          },
+          "value": "1P2W"
+        }, {
+          "desc": {
+            "en": "",
+            "zh": "3P4W"
+          },
+          "value": "3P4W"
+        }]
+      }]
+    }
+  }
+}
