@@ -1,17 +1,10 @@
 export default function (params = {}) {
   // linear-gradient(0deg,rgba(176,102,233,1) 0%,rgba(102,120,233,1) 100%);
   var colors = ['rgba(176,102,233,1)', 'rgba(246,17,50,1)']
-  //  xAxis = xAxis||  ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'];
-  //  data = data|| [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3];
+  if (params.homepage == true) { //是首页的话直接return 出去,//样式写在首页了,,
+    return params
+  }
 
-  // if(riskTimeCounts){
-  //   var riskXAxis = [];
-  //   data = riskTimeCounts.map((item)=>{
-  //     riskXAxis.push(item.time)
-  //     return item.value
-  //   })
-  //   xAxis = riskXAxis
-  // }
   return {
     color: ['#6678E9', 'rgba(232,107,162,1)'],
     title: {

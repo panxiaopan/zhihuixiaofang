@@ -1,4 +1,6 @@
 export default function (params = {}) {
+  console.log('饼')
+  console.log(params)
   //  data = data || [{
   //         value: 335,
   //         name: '正常'

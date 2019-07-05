@@ -27,7 +27,7 @@
       class="hj_home__div hj_home__device-status"
       id="hj_home__device-status"
       canvas-id="hj_home__device-status"
-      :ec="ecPie"
+      :ec="ecBarLine"
     ></ec-canvas>
 
     <hj-panel
@@ -49,6 +49,11 @@
     >
       <hjPanelTroubleStasticSlot :risksByGrade="risksByGrade" @iclick="clickGrade"></hjPanelTroubleStasticSlot>
     </hj-panel>
+    <!-- <wux-tabs defaultCurrent="tab1">
+      <wux-tab key="tab1" title="Tab 1"></wux-tab>
+      <wux-tab key="tab2" title="Tab 2"></wux-tab>
+      <wux-tab key="tab3" title="Tab 3"></wux-tab>
+    </wux-tabs>-->
     <hjDatePicker
       v-if="isAuth"
       :classStr="'hj_home__trouble__date_picker'"
@@ -56,20 +61,22 @@
       :dateType.sync="dateType"
       @change-date-type-value="changeDateTypeValue"
     ></hjDatePicker>
-    <ec-canvas
+
+    <!-- <ec-canvas
       v-if="isAuth"
       class="hj_home__trouble_work_order_tendency_chart"
       id="hj_home__trouble_work_order_tendency_chart"
       canvas-id="hj_home__trouble_work_order_tendency_chart"
       :ec="ecBarLine"
-    ></ec-canvas>
-    <ec-canvas
+    ></ec-canvas>-->
+
+    <!-- <ec-canvas
       v-if="isAuth"
       class="hj_home__trouble_reason_statistics_chart"
       id="hj_home__trouble_reason_statistics_chart"
       canvas-id="hj_home__trouble_reason_statistics_chart"
       :ec="ecRadar"
-    ></ec-canvas>
+    ></ec-canvas>-->
     <!-- <official-account></official-account> -->
   </div>
 </template>
@@ -130,6 +137,7 @@ export default {
   mixins: [wuxToptips],
   data() {
     return {
+      datarow: [],
       isMounted: false,
       // risksByGrades: {},
       summaryInfo: mockSummaryInfo.data, //
@@ -142,13 +150,92 @@ export default {
       userInfo: {},
       ecPie: {
         // 将 lazyLoad 设为 true 后，需要手动初始化图表
-        lazyLoad: true,
-        options: pieFun()
+        lazyLoad: false,
+        options: pieFun({
+          data: [
+            {
+              value: 335,
+              name: "正020常"
+            },
+            {
+              value: 310,
+              name: "报警"
+            },
+            {
+              value: 54,
+              name: "故障"
+            },
+            {
+              value: 5,
+              name: "离线"
+            }
+          ]
+        })
       },
       ecBarLine: {
         // 将 lazyLoad 设为 true 后，需要手动初始化图表
-        lazyLoad: true,
-        options: barLineFun()
+        lazyLoad: false,
+        options: barLineFun({
+          homepage: true, //自己写的,判断是首页的进入
+          tooltip: {
+            trigger: "axis",
+            axisPointer: {
+              // 坐标轴指示器，坐标轴触发有效
+              type: "shadow" // 默认为直线，可选为：'line' | 'shadow'
+            }
+          },
+          legend: {
+            data: ["直接访问", "邮件营销", "联盟广告"]
+          },
+          grid: {
+            left: "3%",
+            right: "4%",
+            bottom: "3%",
+            containLabel: true
+          },
+          yAxis: {
+            type: "value"
+          },
+          xAxis: {
+            type: "category",
+            data: ["周一", "周二", "周三"]
+          },
+          series: [
+            {
+              name: "直接访问",
+              type: "bar",
+              stack: "总量",
+              label: {
+                normal: {
+                  show: true
+                }
+              },
+              data: [320, 302, 301]
+            },
+            {
+              name: "邮件营销",
+              type: "bar",
+              stack: "总量",
+              label: {
+                normal: {
+                  show: true
+                }
+              },
+              data: [120, 132, 101]
+            },
+            {
+              name: "联盟广告",
+              type: "bar",
+              stack: "总量",
+              label: {
+                normal: {
+                  show: true
+                }
+              },
+              data: [220, 182, 191]
+            }
+          ]
+        })
       },
       ecBar: {
         // 将 lazyLoad 设为 true 后，需要手动初始化图表
@@ -318,40 +405,40 @@ export default {
     //     this[instanceName].dispose();
     //   }
     // },
-    initCharts(
-      { pieOptions, barLineOptions, radarOptions },
-      notInitObj = {
-        notInitPie: false,
-        notInitBarLine: false,
-        notInitRadar: false
-      }
-    ) {
-      console.log("notInitObj", notInitObj);
-      [
-        {
-          instanceName: "hj_home__device-status__chart",
-          domId: "hj_home__device-status",
-          options: pieOptions ? pieOptions : pieFun(),
-          notInit: notInitObj.notInitPie
-        },
-        {
-          instanceName: "hj_home__trouble_work_order_tendency_chart__chart",
-          domId: "hj_home__trouble_work_order_tendency_chart",
-          options: barLineOptions ? barLineOptions : barLineFun(),
-          notInit: notInitObj.notInitBarLine
-        },
-        {
-          instanceName: "hj_home__trouble_reason_statistics_chart__chart",
-          domId: "hj_home__trouble_reason_statistics_chart",
-          options: radarOptions ? radarOptions : radarFun(),
-          notInit: notInitObj.notInitRadar
-        }
-      ].forEach(item => {
-        if (!item.notInit) {
-          this.init(item);
-        }
-      });
-    },
+    // initCharts(
+    //   { pieOptions, barLineOptions, radarOptions },
+    //   notInitObj = {
+    //     notInitPie: false,
+    //     notInitBarLine: false,
+    //     notInitRadar: false
+    //   }
+    // ) {
+    //   console.log("notInitObj", notInitObj);
+    //   [
+    //     {
+    //       instanceName: "hj_home__device-status__chart",
+    //       domId: "hj_home__device-status",
+    //       options: pieOptions ? pieOptions : pieFun(),
+    //       notInit: notInitObj.notInitPie
+    //     },
+    //     {
+    //       instanceName: "hj_home__trouble_work_order_tendency_chart__chart",
+    //       domId: "hj_home__trouble_work_order_tendency_chart",
+    //       options: barLineOptions ? barLineOptions : barLineFun(),
+    //       notInit: notInitObj.notInitBarLine
+    //     },
+    //     {
+    //       instanceName: "hj_home__trouble_reason_statistics_chart__chart",
+    //       domId: "hj_home__trouble_reason_statistics_chart",
+    //       options: radarOptions ? radarOptions : radarFun(),
+    //       notInit: notInitObj.notInitRadar
+    //     }
+    //   ].forEach(item => {
+    //     if (!item.notInit) {
+    //       this.init(item);
+    //     }
+    //   });
+    // },
     resetChartOption() {
       // 无法生效
       // this.ecPie = { options: radarFun() };
@@ -373,7 +460,7 @@ export default {
       );
 
       deviceStatusCom.chart.setOption(radarFun());
-      troubleReasonCom.chart.setOption(pieFun());
+      // troubleReasonCom.chart.setOption(pieFun());
     },
     bindViewTap() {
       console.log("bindViewTap");
@@ -425,17 +512,17 @@ export default {
         .then(res => {
           console.log("res", res);
           var lummaryInfo = res.data;
-          this.initCharts(
-            {
-              barLineOptions: barLineFun(
-                this.processRiskTimeCountsData(lummaryInfo.riskTimeCounts)
-              ),
-              radarOptions: radarFun(
-                this.processRisksByReasonData(lummaryInfo.risksByReason)
-              )
-            },
-            { notInitPie: true }
-          );
+          // this.initCharts(
+          //   {
+          //     barLineOptions: barLineFun(
+          //       this.processRiskTimeCountsData(lummaryInfo.riskTimeCounts)
+          //     ),
+          //     radarOptions: radarFun(
+          //       this.processRisksByReasonData(lummaryInfo.risksByReason)
+          //     )
+          //   },
+          //   { notInitPie: true }
+          // );
         })
         .catch(e => {
           this.dateType = typeObj.oldType;
@@ -541,52 +628,88 @@ export default {
       if (!this.$store.dispatch("isAuth", "mp_index_group")) {
         return false;
       }
-      this.httpRequest("collectdata")
-        .then(res => {
-          console.log("接口首页");
+      this.httpRequest("collectdata").then(res => {
+        console.log("接口首页");
 
-          console.log(res);
+        console.log(res);
+        this.summaryInfo = res.data;
+        this.socalinformtion = res.data;
+        let data = res.data.deviceStatusWithCountAndTypes;
 
-          this.summaryInfo = res.data;
-          this.socalinformtion = res.data;
-          // this.$nextTick(() => {
-          //   if (this.timer) {
-          //     clearTimeout(this.timer);
-          //     this.timer = null;
-          //   }
-          //   this.timer = setTimeout(() => {
-          //     this.initCharts({
-          //       pieOptions: pieFun(
-          //         this.processDeviceStatusWithCountsData(
-          //           this.summaryInfo.deviceStatusWithCounts
-          //         )
-          //       ),
-          //       barLineOptions: barLineFun(
-          //         this.processRiskTimeCountsData(
-          //           this.summaryInfo.riskTimeCounts
-          //         )
-          //       ),
-          //       radarOptions: radarFun(
-          //         this.processRisksByReasonData(this.summaryInfo.risksByReason)
-          //       )
-          //     });
-          //   }, 500);
-          // });
-        })
-        .catch(res => {
-          console.log("res", res);
+        for (let i in data) {
+          console.log(data[i]);
 
-          this.wuxToptips({ text: "请求汇总信息失败" }, res);
-          this.$nextTick(() => {
-            if (this.timer) {
-              clearTimeout(this.timer);
-              this.timer = null;
-            }
-            this.timer = setTimeout(() => {
-              this.initCharts({});
-            }, 1000);
-          });
-        });
+          // for (let n in data[i].deviceStatusWithCounts) {
+          //   console.log(data[i].deviceStatusWithCounts[n]);
+          // }
+        }
+
+        // for (let i in data) {
+        //   let temp = {};
+        //   let devitotal = {};
+        //   let devicenum = 0;
+
+        //   // for (let n of data[i].deviceStatusWithCounts) {
+
+        //   // }
+        //   this.datarow.push(temp);
+        //   // this.devicechartData.rows.push(temp);
+        //   // this.deviceamount.push(devitotal);
+        // }
+
+        console.log(data);
+
+        // for (let i in barData) {
+        //   let obj = {};
+
+        //   for (let n of barData[i].deviceStatusWithCounts) {
+        //     console.log(n.count);
+        //     // obj[n["desc"]] = n.count;
+        //     // obj["类型"] = barData[i].type;
+        //   }
+
+        //   datarow.push(obj);
+        // }
+        // console.log("数据");
+        // console.log(barData);
+        // this.$nextTick(() => {
+        //   if (this.timer) {
+        //     clearTimeout(this.timer);
+        //     this.timer = null;
+        //   }
+        //   this.timer = setTimeout(() => {
+        //     this.initCharts({
+        //       pieOptions: pieFun(
+        //         this.processDeviceStatusWithCountsData(
+        //           this.summaryInfo.deviceStatusWithCounts
+        //         )
+        //       ),
+        //       barLineOptions: barLineFun(
+        //         this.processRiskTimeCountsData(
+        //           this.summaryInfo.riskTimeCounts
+        //         )
+        //       ),
+        //       radarOptions: radarFun(
+        //         this.processRisksByReasonData(this.summaryInfo.risksByReason)
+        //       )
+        //     });
+        //   }, 500);
+        // });
+      });
+      // .catch(res => {
+      //   console.log("res", res);
+
+      //   this.wuxToptips({ text: "请求汇总信息失败" }, res);
+      //   this.$nextTick(() => {
+      //     if (this.timer) {
+      //       clearTimeout(this.timer);
+      //       this.timer = null;
+      //     }
+      //     this.timer = setTimeout(() => {
+      //       this.initCharts({});
+      //     }, 1000);
+      //   });
+      // });
     }
   },
   created() {
@@ -688,7 +811,7 @@ export default {
   align-items: center;
 }
 .phj_back {
-  width: 25%;
+  width: 30%;
   background: linear-gradient(120deg, #8364db 0%, #6777e9 100%);
   height: 120rpx;
   border-radius: 10rpx;
